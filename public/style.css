@@ -1,0 +1,106 @@
+/* Base Styles (270px and up) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.container {
+  background: #00412d;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 68, 42, 0.651);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: black;
+  font-size: 1.5rem;
+  font-family: 'Lucida Handwriting', cursive;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  background:  rgb(235, 232, 103);
+  color: #00412d;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+a {
+  color: #4ac0f7;
+  text-decoration: none;
+}
+
+
+/* Home Page Specific */
+.success-message {
+  color: #f0ff6c;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.logout-btn {
+  background: #dc3545;
+  margin-top: 10px;
+}
+
+.logout-btn:hover {
+  background: #c82333;
+}
+
+/* Media Queries */
+@media (min-width: 360px) {
+  .container {
+    padding: 25px;
+  }
+  input, button {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}

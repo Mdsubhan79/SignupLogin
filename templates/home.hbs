@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="success-message">{{message}}</h1>
+    
+    <div class="user-info">
+      {{#if isLogin}}
+        <h2>Welcome back!</h2>
+        <p>Name: {{user.name}}</p>
+        <p>Email: {{user.email}}</p>
+        <form action="/logout" method="POST">
+          <button type="submit" class="logout-btn">Logout</button>
+        </form>
+      {{else}}
+        <h2>New User Created</h2>
+        <p>Name: {{user.name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Account created successfully!</p>
+      {{/if}}
+    </div>
+
+    <a href="/">Back to Login</a>
+  </div>
+</body>
+</html>
