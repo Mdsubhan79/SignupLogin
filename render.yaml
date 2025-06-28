@@ -1,7 +1,7 @@
 services:
   - type: web
     name: signlogin-app
-    buildCommand: npm install
+    buildCommand: npm install && npm run build 
     startCommand: npm start
     envVars:
       - key: NODE_ENV
