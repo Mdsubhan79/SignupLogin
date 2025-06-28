@@ -1,0 +1,24 @@
+# render.yaml - Production Deployment Configuration
+services:
+  - type: web
+    name: signlogin-app
+    env: node
+    buildCommand: yarn install
+    startCommand: yarn start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        value: mongodb+srv://new-user2:F5Id2zzDTg5MJfzX@cluster0.yv2ljqc.mongodb.net/signlogin?retryWrites=true&w=majority
+    plan: free
+    region: oregon
+    healthCheckPath: /login
+    autoDeploy: true
+    disk:
+      name: signlogin-data
+      mountPath: /data
+      sizeGB: 1
