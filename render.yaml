@@ -1,9 +1,8 @@
 services:
   - type: web
     name: signlogin-app
-    env: node
-    buildCommand: cd .. && yarn install  # Move up to root directory
-    startCommand: cd .. && yarn start   # Move up to root directory
+    buildCommand: npm install
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
